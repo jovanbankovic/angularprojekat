@@ -12,12 +12,28 @@ import { InMemoryDataService } from 'src/app/services/in-memory-data.service';
 export class MusicItemComponent implements OnInit {
   @Input() musicItem: MusicItem;
   @Output() addToCart: EventEmitter<void> = new EventEmitter<void>();
+
+  public isModalDisplayed: boolean;
+
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.isModalDisplayed = false;
+  }
 
   // tslint:disable-next-line:typedef
   public addItemToCart() {
     this.addToCart.emit();
+  }
+
+  // tslint:disable-next-line:typedef
+  btnClickDisplayModal() {
+    this.isModalDisplayed = !this.isModalDisplayed;
+  }
+
+  displayModal(): string {
+    if (this.isModalDisplayed) {
+      return 'block';
+    } else { return 'none'; }
   }
 }

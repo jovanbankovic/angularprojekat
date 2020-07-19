@@ -11,46 +11,31 @@ import { MusicService } from '../../services/music.service';
   styleUrls: ['./music-choose.component.css']
 })
 export class MusicChooseComponent implements OnInit {
-  private numberOfItemsInCart = 0;
-
   public musicItemsToDisplay: Array<MusicItem>;
-
   public priceOfOrder$: Observable<number>;
-
   public allMusicGenres$: Observable<Array<string>>;
-
   public musicItemNamePattern$: Subject<string> = new Subject();
   public specificMusicGenre$: Subject<string> = new Subject();
 
-  constructor(
-    private musicItemService: MusicService
-  ) {}
+  constructor(private musicItemService: MusicService) {}
 
   ngOnInit(): void {
-    this.allMusicGenres$ = this.musicItemService
-      .getAllMusicGenres$()
-      .pipe(take(1));
-
-    this.musicItemNamePattern$
-      .pipe(
+    this.allMusicGenres$ = this.musicItemService.getAllMusicGenres$().pipe(take(1));
+    this.musicItemNamePattern$.pipe(
         switchMap((musicItemPattern: string) =>
           this.musicItemService.getMusicItemByPattern$(musicItemPattern)
         )
-      )
-      .subscribe((musicItemsToDisplay: Array<MusicItem>) => {
-        console.log(musicItemsToDisplay);
+      ).subscribe((musicItemsToDisplay: Array<MusicItem>) => {
         this.musicItemsToDisplay = musicItemsToDisplay;
       });
 
-    this.specificMusicGenre$
-      .pipe(
+    this.specificMusicGenre$.pipe(
         switchMap((musicGenre: string) =>
           this.musicItemService.getAllMusicItemsFromGenres$(musicGenre)
         )
       )
       .subscribe((musicItemsToDisplay: Array<MusicItem>) => {
         this.musicItemsToDisplay = musicItemsToDisplay;
-        console.log(musicItemsToDisplay);
       });
   }
 

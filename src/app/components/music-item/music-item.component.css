@@ -16,3 +16,21 @@
 {
     margin-left: 5px;
 }
+
+.info {
+    font-size: 18px;
+    color: rgb(41, 125, 235);
+}
+
+.button-division
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-background
+{
+    background: linear-gradient(75deg, rgb(204, 255, 255), rgb(255, 204, 255));
+}
+

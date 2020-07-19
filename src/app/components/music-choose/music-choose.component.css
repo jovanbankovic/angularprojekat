@@ -54,12 +54,11 @@
     letter-spacing: 1px;
 }
 
-.most-popular
+.card-center
 {
-    background: linear-gradient(75deg, rgb(204, 255, 255), rgb(255, 204, 255));
-    width: 100%;
-    height: 50px;
     display: flex;
     justify-content: center;
-    align-content: center;
+    align-items: center;
 }
+
+

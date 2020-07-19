@@ -12,7 +12,7 @@ export class InMemoryDataService implements InMemoryDbService {
             { id: 1, name: 'HipHop' },
             { id: 2, name: 'Rock' },
             { id: 3, name: 'Trap' },
-            { id: 5, name: 'Pop' }
+            { id: 4, name: 'Pop' }
         ];
         const musicItems = [
             {
@@ -67,46 +67,137 @@ export class InMemoryDataService implements InMemoryDbService {
                 id: 5,
                 name: 'AFTER HOURS',
                 price: 13,
-                madeBy: 5,
+                madeBy: 4,
                 picture: 'https://www.musicumpire.co.uk/wp-content/uploads/2020/04/After-Hours_The-Weeknd.jpg',
                 author: 'The Weeknd',
                 releaseDate: '20.03.2020',
                 awards: 'Grammy 2020',
-                genre: 'Trap',
+                genre: 'Pop/HipHop',
                 rate: 5
             },
             {
                 id: 6,
                 name: 'PRIORITETI',
                 price: 13,
-                madeBy: 1,
+                madeBy: 3,
                 picture: 'https://images.genius.com/d4518c8deb67c1ff5ca148a86b22c38e.1000x1000x1.jpg',
                 author: 'Klinac',
                 releaseDate: '06.01.2020',
+                awards: '/',
+                genre: 'HipHop/Trap',
+                rate: 5
+            },
+            {
+                id: 7,
+                name: 'SCORPION',
+                price: 15,
+                madeBy: 1,
+                picture: 'https://upload.wikimedia.org/wikipedia/en/9/90/Scorpion_by_Drake.jpg',
+                author: 'Drake',
+                releaseDate: '29.05.2018',
                 awards: '/',
                 genre: 'HipHop',
                 rate: 5
             },
             {
-                id: 7,
-                name: 'PHYSICAL GRAFFITI',
-                price: 15,
-                madeBy: 2,
-                picture: 'https://images-na.ssl-images-amazon.com/images/I/91wA6mJcfBL._SL1425_.jpg',
-                author: 'Led Zeppelin',
-                releaseDate: '24.02.1975',
+                id: 8,
+                name: 'ETERNAL ATAKE',
+                price: 13,
+                madeBy: 3,
+                picture: 'https://upload.wikimedia.org/wikipedia/en/1/1f/Eternal_Atake_Lil_Uzi_Vert.jpg',
+                author: 'Lil Uzi Vert',
+                releaseDate: '06.03.2020',
                 awards: '/',
-                genre: 'Rock',
+                genre: 'Trap',
+                rate: 5
+            },
+            {
+                id: 9,
+                name: 'LEGENDS NEVER DIE',
+                price: 15,
+                madeBy: 3,
+                picture: 'https://consequenceofsound.net/wp-content/uploads/2020/07/juice-wrld-legends-never-die-album-artwork-cover.jpg?quality=80',
+                author: 'Juice Wrld',
+                releaseDate: '10.07.2020',
+                awards: '/',
+                genre: 'HipHop/Trap',
+                rate: 5
+            },
+            {
+                id: 10,
+                name: 'BAD VIBES FOREVER',
+                price: 13,
+                madeBy: 1,
+                picture: 'https://images-na.ssl-images-amazon.com/images/I/81mXQE0tfML._SX466_.jpg',
+                author: 'XXXTentacion',
+                releaseDate: '06.12.2019',
+                awards: '/',
+                genre: 'HipHop/Rock',
+                rate: 5
+            },
+            {
+                id: 11,
+                name: 'ADHD',
+                price: 11,
+                madeBy: 1,
+                picture: 'https://upload.wikimedia.org/wikipedia/en/b/bd/Joyner_Lucas_-_ADHD.jpg',
+                author: 'Joyner Lucas',
+                releaseDate: '25.03.2020',
+                awards: '/',
+                genre: 'HipHop',
+                rate: 5
+            },
+            {
+                id: 12,
+                name: 'HOLLYWOODs BLEEDING',
+                price: 15,
+                madeBy: 3,
+                picture: 'https://upload.wikimedia.org/wikipedia/en/5/58/Post_Malone_-_Hollywood%27s_Bleeding.png',
+                author: 'Post Malone',
+                releaseDate: '06.09.2019',
+                awards: '/',
+                genre: 'HipHop/Pop/Rock',
+                rate: 5
+            },
+            {
+                id: 13,
+                name: 'HOTEL DIABLO',
+                price: 13,
+                madeBy: 1,
+                picture: 'https://upload.wikimedia.org/wikipedia/en/e/ea/Machine_Gun_Kelly_-_Hotel_Diablo.png',
+                author: 'Machine Gun Kelly',
+                releaseDate: '05.07.2019',
+                awards: '/',
+                genre: 'HipHop/Rock',
+                rate: 5
+            },
+            {
+                id: 14,
+                name: 'MUSIC TO BE MURDERED BY',
+                price: 15,
+                madeBy: 1,
+                picture: 'https://upload.wikimedia.org/wikipedia/en/8/80/Eminem_-_Music_to_Be_Murdered_By.png',
+                author: 'Eminem',
+                releaseDate: '17.01.2020',
+                awards: '/',
+                genre: 'HipHop',
+                rate: 5
+            },
+            {
+                id: 15,
+                name: 'SKINS',
+                price: 15,
+                madeBy: 1,
+                picture: 'https://images-na.ssl-images-amazon.com/images/I/71McYDxpVLL._SL1500_.jpg',
+                author: 'XXXTentacion',
+                releaseDate: '07.12.2018',
+                awards: '/',
+                genre: 'HipHop/Rock',
                 rate: 5
             }
 
         ];
         return { musicItems, musicGenres };
-    }
-    genId(musicItems: MusicItem[]): number {
-        return musicItems.length > 0
-          ? Math.max(...musicItems.map((musicItem) => musicItem.id)) + 1
-          : 11;
     }
 }
 

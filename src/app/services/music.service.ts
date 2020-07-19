@@ -70,7 +70,6 @@ export class MusicService {
 
   getMusicItemByPattern$(pattern: string): Observable<Array<MusicItem>> {
     if (!pattern.trim()) { return of(new Array<MusicItem>()); }
-    console.log(pattern);
     return this.http
       .get<Array<MusicItem>>(`${this.musicItemsUrl}/?name=${pattern}`)
       .pipe(
@@ -104,7 +103,6 @@ export class MusicService {
   }
 
   getMusicItemInformation$(musicItemId: number): Observable<MusicGenre> {
-    console.log(musicItemId);
     return this.http
       .get<Array<MusicGenre>>(
         `${this.musicItemsUrl}/?id=${musicItemId}`
