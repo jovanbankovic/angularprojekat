@@ -1,0 +1,14 @@
+<div class="row-album">
+<div class="card" style="width: 18rem;">
+  <img src={{musicItem.picture}} class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text text-style">{{musicItem.name}}</p>
+    <p class="card-text text-style">Author: {{musicItem.author}}</p>
+    <p class="card-text text-style">Price: {{musicItem.price}}$</p>
+
+    <button class="btn btn-primary btn-sm mt-3 mb-2" (click)="addItemToCart()">
+      Add To Cart
+    </button>
+  </div>
+</div> 
+</div>
