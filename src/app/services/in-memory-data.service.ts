@@ -85,7 +85,7 @@ export class InMemoryDataService implements InMemoryDbService {
                 releaseDate: '06.01.2020',
                 awards: '/',
                 genre: 'HipHop/Trap',
-                rate: 5
+                rate: 3
             },
             {
                 id: 7,
@@ -97,7 +97,7 @@ export class InMemoryDataService implements InMemoryDbService {
                 releaseDate: '29.05.2018',
                 awards: '/',
                 genre: 'HipHop',
-                rate: 5
+                rate: 4
             },
             {
                 id: 8,
@@ -109,7 +109,7 @@ export class InMemoryDataService implements InMemoryDbService {
                 releaseDate: '06.03.2020',
                 awards: '/',
                 genre: 'Trap',
-                rate: 5
+                rate: 4
             },
             {
                 id: 9,
@@ -121,7 +121,7 @@ export class InMemoryDataService implements InMemoryDbService {
                 releaseDate: '10.07.2020',
                 awards: '/',
                 genre: 'HipHop/Trap',
-                rate: 5
+                rate: 4
             },
             {
                 id: 10,
@@ -133,7 +133,7 @@ export class InMemoryDataService implements InMemoryDbService {
                 releaseDate: '06.12.2019',
                 awards: '/',
                 genre: 'HipHop/Rock',
-                rate: 5
+                rate: 4
             },
             {
                 id: 11,
@@ -145,7 +145,7 @@ export class InMemoryDataService implements InMemoryDbService {
                 releaseDate: '25.03.2020',
                 awards: '/',
                 genre: 'HipHop',
-                rate: 5
+                rate: 4
             },
             {
                 id: 12,
@@ -157,7 +157,7 @@ export class InMemoryDataService implements InMemoryDbService {
                 releaseDate: '06.09.2019',
                 awards: '/',
                 genre: 'HipHop/Pop/Rock',
-                rate: 5
+                rate: 4
             },
             {
                 id: 13,
@@ -169,7 +169,7 @@ export class InMemoryDataService implements InMemoryDbService {
                 releaseDate: '05.07.2019',
                 awards: '/',
                 genre: 'HipHop/Rock',
-                rate: 5
+                rate: 3
             },
             {
                 id: 14,
@@ -181,7 +181,7 @@ export class InMemoryDataService implements InMemoryDbService {
                 releaseDate: '17.01.2020',
                 awards: '/',
                 genre: 'HipHop',
-                rate: 5
+                rate: 4
             },
             {
                 id: 15,
@@ -193,7 +193,7 @@ export class InMemoryDataService implements InMemoryDbService {
                 releaseDate: '07.12.2018',
                 awards: '/',
                 genre: 'HipHop/Rock',
-                rate: 5
+                rate: 4
             }
 
         ];

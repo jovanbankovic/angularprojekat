@@ -20,6 +20,7 @@ export class MusicChooseComponent implements OnInit {
   constructor(private musicItemService: MusicService) {}
 
   ngOnInit(): void {
+
     this.allMusicGenres$ = this.musicItemService.getAllMusicGenres$().pipe(take(1));
     this.musicItemNamePattern$.pipe(
         switchMap((musicItemPattern: string) =>
@@ -43,8 +44,8 @@ export class MusicChooseComponent implements OnInit {
     this.musicItemNamePattern$.next(musicName);
   }
 
-  searchedMusicGenreName(musicGenre: string): void {
+  searchedMusicGenreName(musicGenre: string): void
+  {
     this.specificMusicGenre$.next(musicGenre);
   }
-
 }
