@@ -11,3 +11,10 @@ export interface MusicItem
     genre: string;
     rate: number;
 }
+
+export class MusicItemInCart {
+    constructor(
+      public music: MusicItem,
+      public countOfSameItem: number
+    ) {}
+  }

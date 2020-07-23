@@ -16,50 +16,35 @@ import { MusicService } from 'src/app/services/music.service';
 export class SearchMusicItemComponent implements OnInit {
 
   private nameOfMusicItemToSearch$: Subject<string> = new Subject<string>();
-
   public musicGenres: string[];
   public selectedMusicGenre: string;
 
   @Input() allMusicGenres$: Observable<Array<string>>;
 
-  @Output() musicGenreEmitter: EventEmitter<string> = new EventEmitter<
-    string
-  >();
-  @Output() musicItemToSearchEmitter: EventEmitter<string> = new EventEmitter<
-    string
-  >();
+  @Output() musicGenreEmitter: EventEmitter<string> = new EventEmitter<string>();
+  @Output() musicItemToSearchEmitter: EventEmitter<string> = new EventEmitter<string>();
 
   constructor() {}
 
   // tslint:disable-next-line:typedef
   ngOnInit() {
-    this.allMusicGenres$.subscribe(
-      (allMusicGenres: Array<string>) => {
+    this.allMusicGenres$.subscribe((allMusicGenres: Array<string>) => {
         console.log(allMusicGenres);
-        this.musicGenres = [
-          MusicService.ALL_GENRES,
+        this.musicGenres = [MusicService.ALL_GENRES,
           ...allMusicGenres,
         ];
       }
     );
-
-    this.nameOfMusicItemToSearch$
-      .pipe(debounceTime(350), distinctUntilChanged())
+    this.nameOfMusicItemToSearch$.pipe(debounceTime(350), distinctUntilChanged())
       .subscribe((nameOfMusicItem: string) => {
         this.musicItemToSearchEmitter.emit(nameOfMusicItem);
         console.log(nameOfMusicItem);
       });
   }
+  // tslint:disable-next-line:typedef
+  searchGivenMusicGenre(musicGenre: string) { this.musicGenreEmitter.emit(musicGenre); }
 
   // tslint:disable-next-line:typedef
-  searchGivenMusicGenre(musicGenre: string) {
-    this.musicGenreEmitter.emit(musicGenre);
-    console.log(musicGenre);
-  }
-
-  // tslint:disable-next-line:typedef
-  searchMusicItemByName(musicItemName: string) {
-    this.nameOfMusicItemToSearch$.next(musicItemName);
-  }
+  searchMusicItemByName(musicItemName: string) { this.nameOfMusicItemToSearch$.next(musicItemName); }
 }
 

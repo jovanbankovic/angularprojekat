@@ -6,6 +6,7 @@
         </div>
         <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" #searchBox id="searchBox" (input)="searchMusicItemByName(searchBox.value)"/>
     </div>
+    
     <p class="text-research">Or select your favorite music genre...</p>
     <div class="dropdown">
       <select class="select-input" #selectMusicGenre [(ngModel)]="selectedMusicGenre" (change)="searchGivenMusicGenre(selectMusicGenre.value)">

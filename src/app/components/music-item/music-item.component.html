@@ -7,7 +7,7 @@
     <p class="card-text text-style">Price: {{musicItem.price}}$</p>
     <div class="button-division">
       <button class="btn btn-primary btn-sm mt-3 mb-2" (click)="addItemToCart()">Add To Cart</button>
-      <button style="float: right; margin-top: 10px;" class="btn" (click)="btnClickDisplayModal()"><i class="fas fa-info-circle info"></i></button>
+      <button style="float: right; margin-top: 10px;" class="btn" (click)="openModal()"><i class="fas fa-info-circle info"></i></button>
     </div>
   </div>
 </div> 
@@ -18,7 +18,7 @@
     <div class="modal-content modal-background">
       <div class="modal-header">
         <h5 class="modal-title">{{ musicItem.name }}</h5>
-        <button type="button" class="close" (click)="btnClickDisplayModal()">
+        <button type="button" class="close" (click)="openModal()">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
