@@ -11,6 +11,12 @@ import { SearchMusicItemComponent } from './components/search-music-item/search-
 import { MusicItemComponent } from './components/music-item/music-item.component';
 import { MyCartItemComponent } from './components/my-cart-item/my-cart-item.component';
 import { MyProfileComponent } from './components/my-profile/my-profile.component';
+import { ActionReducerMap } from '@ngrx/store';
+import { priceReducer } from './store/price/price.reducer';
+
+const reducers: ActionReducerMap<any> = {
+  price: priceReducer,
+};
 
 @NgModule({
   declarations: [
