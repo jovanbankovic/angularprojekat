@@ -15,10 +15,24 @@ export class AppComponent {
   }
   cart: MusicItem[] = [];
   display = false;
+  public modalShow = false;
 
   onPress()
   {
 
     this.display = !this.display;
+  }
+
+  openModal() { this.modalShow = !this.modalShow; }
+
+  displayModal(): string {
+    if (this.modalShow)
+    {
+      return 'block';
+    }
+    else
+    {
+      return 'none';
+    }
   }
 }
