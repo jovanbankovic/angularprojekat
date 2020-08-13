@@ -4,3 +4,9 @@
     font-size: 18px;
     letter-spacing: 1px;
 }
+
+.row
+{
+    display: flex;
+    flex-direction: column;
+}

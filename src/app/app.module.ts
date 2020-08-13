@@ -11,12 +11,9 @@ import { SearchMusicItemComponent } from './components/search-music-item/search-
 import { MusicItemComponent } from './components/music-item/music-item.component';
 import { MyCartItemComponent } from './components/my-cart-item/my-cart-item.component';
 import { MyProfileComponent } from './components/my-profile/my-profile.component';
-import { ActionReducerMap } from '@ngrx/store';
-import { priceReducer } from './store/price/price.reducer';
-
-const reducers: ActionReducerMap<any> = {
-  price: priceReducer,
-};
+import { ActionReducerMap, StoreModule } from '@ngrx/store';
+import { ShopReducer } from './store/reducer';
+import { ItemInCartComponent } from './components/item-in-cart/item-in-cart.component';
 
 @NgModule({
   declarations: [
@@ -25,13 +22,15 @@ const reducers: ActionReducerMap<any> = {
     SearchMusicItemComponent,
     MusicItemComponent,
     MyCartItemComponent,
-    MyProfileComponent
+    MyProfileComponent,
+    ItemInCartComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    StoreModule.forRoot({ shop: ShopReducer }),
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
       dataEncapsulation: false,
     })

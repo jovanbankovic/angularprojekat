@@ -10,15 +10,19 @@
         <a class="nav-link" routerLink="/" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/myprofile" href="#">About</a>
+        <a class="nav-link" routerLink="/about" href="#">About</a>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <a class="tag-class" routerLink="/mycart" href="#">My cart...<img src="https://img.icons8.com/ultraviolet/40/000000/shopping-cart.png"/></a>
+    <form class="style-center form-inline my-2 my-lg-0">
+      <img (click)="onPress()" src="https://img.icons8.com/ultraviolet/40/000000/shopping-cart.png" alt="cart"/>
+      <span class="badge" *ngIf="cart.length > 0">{{cart.length}}</span>
     </form>
   </div>
 </nav>
 
-<router-outlet></router-outlet>
-
-
+<div class="main-row">
+  <div *ngIf="display">
+    <app-my-cart-list [albums]="cart"></app-my-cart-list>
+  </div>
+  <router-outlet></router-outlet>
+</div>

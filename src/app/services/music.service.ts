@@ -4,14 +4,7 @@ import { Observable, of, concat } from 'rxjs';
 import { MusicItem } from '../models/music-item.model';
 import { MusicGenre } from '../models/music-genre.model';
 
-import {
-  catchError,
-  concatAll,
-  map,
-  switchMap,
-  tap,
-  filter,
-} from 'rxjs/operators';
+import { catchError, concatAll, map, switchMap, tap, filter } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
@@ -28,11 +21,7 @@ export class MusicService {
 
   // tslint:disable-next-line:typedef
   private handleError<T>(operation = 'operation', result?: T) {
-    return (error: any): Observable<T> => {
-      console.error(error, operation);
-      return of(result as T);
-    };
-    }
+    return (error: any): Observable<T> => { return of(result as T); }; }
 
   getAllMusicItemsFromGenres$(musicGenres: string): Observable<Array<MusicItem>> {
     if (musicGenres === MusicService.ALL_GENRES) { return this.getAllMusicItems$(); }

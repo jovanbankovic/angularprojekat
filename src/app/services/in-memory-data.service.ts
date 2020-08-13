@@ -73,7 +73,7 @@ export class InMemoryDataService implements InMemoryDbService {
                 releaseDate: '20.03.2020',
                 awards: 'Grammy 2020',
                 genre: 'Pop/HipHop',
-                rate: 5
+                rate: 4
             },
             {
                 id: 6,

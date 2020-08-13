@@ -1,15 +1,3 @@
-<div class="row">
-
-    <div class="col-md-6">
-      <p class="mb-2">
-        {{ musicItem.name }}
-        <span *ngIf="countOfSameItem != 1">x{{ countOfSameItem }}</span>
-      </p>
-      <p class="text-lead mb-2">{{ musicItem.price }} RSD</p>
-    </div>
-    <div class="col-md-6 to-right">
-      <button class="btn btn-dark btn-sm btn-remove mb-2 ml-auto" (click)="removeFromCart()">
-        Remove
-      </button>
-    </div>
-  </div>
+<div>
+    <app-item-in-cart *ngFor="let album of albums" [product]="album"></app-item-in-cart>
+</div>

@@ -7,23 +7,7 @@ import { MusicItem, MusicItemInCart } from 'src/app/models/music-item.model';
   styleUrls: ['./my-cart-item.component.css']
 })
 export class MyCartItemComponent implements OnInit {
-  @Input() public musicItemInCart: MusicItemInCart;
-  @Output() removeMusicItemInCart: EventEmitter<MusicItemInCart> = new EventEmitter<MusicItemInCart>();
-
-
-  public musicItem: MusicItem;
-  public countOfSameItem: number;
-
-  constructor() {
-
-  }
-
-  ngOnInit(): void {
-    this.musicItem = this.musicItemInCart.music;
-    this.countOfSameItem = this.musicItemInCart.countOfSameItem;
-  }
-
-  public removeFromCart(): void {
-    this.removeMusicItemInCart.emit(this.musicItemInCart);
-  }
+    ngOnInit(): void {
+    }
+    @Input() albums: MusicItem[] = [];
 }

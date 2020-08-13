@@ -7,7 +7,7 @@ import { MyProfileComponent } from './my-profile/my-profile.component';
 const routes: Routes = [
   { path: '' , component: MusicChooseComponent },
   { path: 'mycart', component: MyCartItemComponent },
-  { path: 'myprofile', component: MyProfileComponent }
+  { path: 'about', component: MyProfileComponent }
 ];
 
 @NgModule({
