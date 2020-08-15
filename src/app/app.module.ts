@@ -14,7 +14,11 @@ import { MyProfileComponent } from './components/my-profile/my-profile.component
 import { ActionReducerMap, StoreModule } from '@ngrx/store';
 import { ShopReducer } from './store/reducer';
 import { ItemInCartComponent } from './components/item-in-cart/item-in-cart.component';
-
+import { TopRatingComponent } from './components/top-rating/top-rating.component';
+import { ShopEffects } from './store/effect';
+import { EffectsModule } from '@ngrx/effects';
+import { musicItemKey } from './store/selector';
+import * as fromMusic from './store/reducer';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +27,8 @@ import { ItemInCartComponent } from './components/item-in-cart/item-in-cart.comp
     MusicItemComponent,
     MyCartItemComponent,
     MyProfileComponent,
-    ItemInCartComponent
+    ItemInCartComponent,
+    TopRatingComponent
   ],
   imports: [
     BrowserModule,
@@ -31,6 +36,7 @@ import { ItemInCartComponent } from './components/item-in-cart/item-in-cart.comp
     FormsModule,
     HttpClientModule,
     StoreModule.forRoot({ shop: ShopReducer }),
+    EffectsModule.forRoot([ShopEffects]),
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
       dataEncapsulation: false,
     })

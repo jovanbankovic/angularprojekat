@@ -9,6 +9,9 @@
       <li class="nav-item active">
         <a class="nav-link" routerLink="/" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/topratings" href="#">Top rating's <span class="sr-only">(current)</span></a>
+      </li>
       <li class="nav-item">
         <a class="nav-link" routerLink="/about" href="#">About</a>
       </li>
@@ -36,6 +39,9 @@
       </div>
       <div class="modal-body">
         <app-my-cart-item [albums]="cart"></app-my-cart-item>
+      </div>
+      <div *ngFor="let item of cart">
+         <p></p>
       </div>
     </div>
   </div>

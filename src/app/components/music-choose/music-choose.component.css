@@ -44,14 +44,7 @@
     align-items: center;
 }
 
-.list-albums-center
-{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.albums-show, .list-albums
+.albums-show, .albums-show-top, .list-albums
 {
     display: flex;
     width: 100%;
@@ -62,6 +55,8 @@
     margin-left: 5px;
     flex-wrap: wrap;
 }
+
+
 
 .most-popular-panel
 {

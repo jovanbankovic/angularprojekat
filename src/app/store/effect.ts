@@ -13,12 +13,12 @@ export class ShopEffects{
 
 
 @Effect()
-loadAlbums$ = this.actions$.pipe(
+loadTopRatings$ = this.actions$.pipe(
     ofType(ActionTypes.LoadItems),
     mergeMap(()=>
-        this.musicService.getAllMusicItems$().pipe(
-            map(albums=> {
-                return { type: ActionTypes.LoadSuccess, payload: albums };
+        this.musicService.getAllTopRatings().pipe(
+            map(ratings=> {
+                return { type: ActionTypes.LoadSuccess, payload: ratings };              
             }),
             catchError(() => EMPTY)
         )

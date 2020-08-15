@@ -5,6 +5,7 @@ import { MusicItem } from '../models/music-item.model';
 import { MusicGenre } from '../models/music-genre.model';
 
 import { catchError, concatAll, map, switchMap, tap, filter } from 'rxjs/operators';
+import { TopRating } from '../models/top-rating.model';
 
 @Injectable({
   providedIn: 'root',
@@ -13,6 +14,7 @@ export class MusicService {
   private dbURL = 'api';
   private musicItemsUrl = `${this.dbURL}/musicItems`;
   private musicGenresUrl = `${this.dbURL}/musicGenres`;
+  private topRatingUrl = `${this.dbURL}/topRating`;
 
   // tslint:disable-next-line:member-ordering
   public static ALL_GENRES = 'All';
@@ -42,6 +44,11 @@ export class MusicService {
           )
         )
       );
+  }
+
+  getAllTopRatings()
+  {
+    return this.http.get<Array<TopRating>>(this.topRatingUrl);
   }
 
   getAllMusicItems$(): Observable<Array<MusicItem>> {

@@ -1,5 +1,6 @@
 import { ActionsUnion, ActionTypes } from './action';
-
+import { EntityState, EntityAdapter, createEntityAdapter } from '@ngrx/entity';
+import { MusicItem } from '../models/music-item.model';
 export const initialState = { items: [], cart: [] };
 
 export function ShopReducer(state = initialState, action: ActionsUnion)
@@ -17,3 +18,13 @@ export function ShopReducer(state = initialState, action: ActionsUnion)
             return state;
     }
 }
+
+export interface MusicItemState extends EntityState<MusicItem> {
+    numberOfExercises: number;
+  }
+
+  export const musicAdapter: EntityAdapter<MusicItem> = createEntityAdapter<
+  MusicItem
+>({
+  selectId: (item: MusicItem) => item.id
+});

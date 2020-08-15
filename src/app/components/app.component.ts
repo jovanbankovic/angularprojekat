@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Store, select } from '@ngrx/store';
 import { MusicItem } from '../models/music-item.model';
 import { GetItems } from '../store/action';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',

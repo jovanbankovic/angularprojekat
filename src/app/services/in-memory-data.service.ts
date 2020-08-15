@@ -197,7 +197,18 @@ export class InMemoryDataService implements InMemoryDbService {
             }
 
         ];
-        return { musicItems, musicGenres };
+        const topRating = [
+            {
+                id: 1,
+                name: 'DaBaby',
+                picture: 'https://media.pitchfork.com/photos/5c7d4c1b4101df3df85c41e5/1:1/w_600/Dababy_BabyOnBaby.jpg',
+                album: 'Baby On Baby',
+                awards: '/',
+                genre: 'HipHop',
+                rating: 5
+            }
+        ];
+        return { musicItems, musicGenres, topRating };
     }
 }
 
