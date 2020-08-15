@@ -3,7 +3,6 @@ import { Store, select } from '@ngrx/store';
 import { TopRating } from 'src/app/models/top-rating.model';
 import { GetItems } from 'src/app/store/action';
 
-
 @Component({
   selector: 'app-top-rating',
   templateUrl: './top-rating.component.html',

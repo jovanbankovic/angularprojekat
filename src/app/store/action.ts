@@ -1,6 +1,7 @@
 import { Injectable } from "@angular/core"
 import { Action } from "@ngrx/store"
 import { MusicItem } from '../models/music-item.model';
+import { TopRating } from '../models/top-rating.model';
 
 export enum ActionTypes
 {
@@ -27,7 +28,7 @@ export class GetItems implements Action
 
 export class LoadItems implements Action{
     readonly type = ActionTypes.LoadSuccess;
-    constructor(public payload: MusicItem[]){}
+    constructor(public payload: TopRating[]){}
 }
 
 export type ActionsUnion = AddToCart | RemoveFromCart | LoadItems | GetItems;

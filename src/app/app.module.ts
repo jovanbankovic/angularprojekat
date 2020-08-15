@@ -17,8 +17,7 @@ import { ItemInCartComponent } from './components/item-in-cart/item-in-cart.comp
 import { TopRatingComponent } from './components/top-rating/top-rating.component';
 import { ShopEffects } from './store/effect';
 import { EffectsModule } from '@ngrx/effects';
-import { musicItemKey } from './store/selector';
-import * as fromMusic from './store/reducer';
+
 @NgModule({
   declarations: [
     AppComponent,
