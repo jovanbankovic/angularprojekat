@@ -1,4 +1,14 @@
-<div *ngFor="let item of items">
-    <p>{{item.name}}</p>
-    <p>RADI EFFECT!!!!</p>
-</div>
+<h1 class="text-align">Top rated HipHop artist's</h1>
+<ul class="row-top list-group list-group-flush">
+    <li class="background-li list-group-item"*ngFor="let item of items">
+        <div class="card" style="width: 18rem;">
+            <img class="picture-size" src="{{item.picture}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{item.name}}</h5>
+              <p class="card-text">{{item.genre}}</p>
+              <a href="#" class="btn btn-primary">Artist albums</a>
+            </div>
+          </div> 
+    </li>
+</ul>
+

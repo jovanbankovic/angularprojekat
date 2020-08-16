@@ -9,8 +9,8 @@ import { MusicItem } from '../models/music-item.model';
 })
 export class AppComponent {
   title = 'Soundable';
-  constructor(private store: Store<{items: []; cart: [] }>){
-    store.pipe(select('shop')).subscribe(data=> (this.cart = data.cart))
+  constructor(private store: Store<{items: []; cart: [];}>){
+    store.pipe(select('shop')).subscribe(data=> (this.cart = data['cart']))
   }
   cart: MusicItem[] = [];
   display = false;

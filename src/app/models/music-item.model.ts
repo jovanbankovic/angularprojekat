@@ -1,5 +1,6 @@
 export interface MusicItem
 {
+    subscribe();
     id: number;
     name: string;
     price: number;
@@ -10,6 +11,7 @@ export interface MusicItem
     awards: string;
     genre: string;
     rate: number;
+    link: string;
 }
 
 export class MusicItemInCart {

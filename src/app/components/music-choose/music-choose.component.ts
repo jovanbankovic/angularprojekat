@@ -28,12 +28,14 @@ export class MusicChooseComponent implements OnInit {
         switchMap((musicItemPattern: string) => this.musicItemService.getMusicItemByPattern$(musicItemPattern)))
         .subscribe((musicItemsToDisplay: Array<MusicItem>) => {
           this.musicItemsToDisplay = musicItemsToDisplay;
+          console.log(this.musicItemsToDisplay);
       });
 
     this.specificMusicGenre$.pipe(
         switchMap((musicGenre: string) => this.musicItemService.getAllMusicItemsFromGenres$(musicGenre)))
         .subscribe((musicItemsToDisplay: Array<MusicItem>) => {
           this.musicItemsToDisplay = musicItemsToDisplay; });
+          console.log(this.musicItemsToDisplay);
   }
   searchedMusicItemName(musicName: string): void { this.musicItemNamePattern$.next(musicName); }
   searchedMusicGenreName(musicGenre: string): void { this.specificMusicGenre$.next(musicGenre); }

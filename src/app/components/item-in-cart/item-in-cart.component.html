@@ -1,1 +1,23 @@
-<p>{{product.name}}, Author: {{product.author}} | Price: {{product.price}}</p>
+<div class="row-album">
+    <div class="card" style="width: 18rem;">
+      <img src={{product.picture}} class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-text text-style">{{product.name}}</p>
+        <p class="card-text text-style">Author: {{product.author}}</p>
+        <p class="card-text text-style">Price: {{product.price}}$</p>
+        <button (click)="goToUrl(product.link)">Listen to the album</button>
+        <mat-basic-audio-player [audioUrl]="msbapAudioUrl" [title]="msbapTitle" [autoPlay]="false" muted="muted" (trackEnded)="onEnded($event)"
+    [displayTitle]="msbapDisplayTitle" [displayVolumeControls]="msaapDisplayVolumeControls" ></mat-basic-audio-player>
+      </div>
+    </div> 
+</div>
+
+<!--<div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{product.name}}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">{{product.author}}</h6>
+      <p class="card-text">{{product.awards}}</p>
+      <a href="#" class="card-link">{{product.genre}}</a>
+      <a href="#" class="card-link">{{product.rate}}</a>
+    </div>
+  </div>-->

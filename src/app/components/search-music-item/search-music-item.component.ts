@@ -3,9 +3,7 @@ import { MusicItem } from 'src/app/models/music-item.model';
 import { Observable, Subject } from 'rxjs';
 
 import { select, Store } from '@ngrx/store';
-import { take, switchMap, debounceTime, distinctUntilChanged } from 'rxjs/operators';
-import { MusicGenre } from 'src/app/models/music-genre.model';
-import { HttpClient } from '@angular/common/http';
+import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
 import { MusicService } from 'src/app/services/music.service';
 
 @Component({

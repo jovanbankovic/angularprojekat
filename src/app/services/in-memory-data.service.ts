@@ -25,7 +25,8 @@ export class InMemoryDataService implements InMemoryDbService {
                 releaseDate: '17.04.2020',
                 awards: 'Grammy 2020',
                 genre: 'HipHop',
-                rate: 5
+                rate: 5,
+                link: 'https://www.youtube.com/playlist?list=OLAK5uy_nCnatM3STUpWy0-uql6Suj56PiNp8sNiA'
             },
             {
                 id: 2,
@@ -37,7 +38,8 @@ export class InMemoryDataService implements InMemoryDbService {
                 releaseDate: '01.03.2019',
                 awards: '/',
                 genre: 'HipHop',
-                rate: 5
+                rate: 5,
+                link: 'https://www.youtube.com/playlist?list=OLAK5uy_l_lgVRsxYdfIIM1-RVrEKzSygQuphEsWE'
             },
             {
                 id: 3,
@@ -49,7 +51,8 @@ export class InMemoryDataService implements InMemoryDbService {
                 releaseDate: '03.08.2018',
                 awards: 'BET Award 2019',
                 genre: 'Trap',
-                rate: 5
+                rate: 5,
+                link: 'https://www.youtube.com/playlist?list=OLAK5uy_m6xt1ZipEd_hALlmTOFY6S9OORu5LqPqc'
             },
             {
                 id: 4,
@@ -61,7 +64,8 @@ export class InMemoryDataService implements InMemoryDbService {
                 awards: '/',
                 genre: 'HipHop',
                 rate: 5,
-                madeBy: 1
+                madeBy: 1,
+                link: 'https://www.youtube.com/playlist?list=OLAK5uy_lPZ2RMEqcRCzOqTw1ujpXxQgaM5JxJYBk'
             },
             {
                 id: 5,
@@ -73,7 +77,8 @@ export class InMemoryDataService implements InMemoryDbService {
                 releaseDate: '20.03.2020',
                 awards: 'Grammy 2020',
                 genre: 'Pop/HipHop',
-                rate: 4
+                rate: 4,
+                link: 'https://www.youtube.com/playlist?list=OLAK5uy_lwaD8UXRautA8W9eWT4zZOvwf5Ktxpax8'
             },
             {
                 id: 6,
@@ -85,7 +90,8 @@ export class InMemoryDataService implements InMemoryDbService {
                 releaseDate: '06.01.2020',
                 awards: '/',
                 genre: 'HipHop/Trap',
-                rate: 3
+                rate: 3,
+                link: 'https://www.youtube.com/playlist?list=OLAK5uy_mZILtH0Zk54QpF0LS5qqsE95HWUQe8WX8'
             },
             {
                 id: 7,
@@ -97,7 +103,8 @@ export class InMemoryDataService implements InMemoryDbService {
                 releaseDate: '29.05.2018',
                 awards: '/',
                 genre: 'HipHop',
-                rate: 4
+                rate: 4,
+                link: 'https://www.youtube.com/playlist?list=OLAK5uy_nxmoDMMD7YOXBekv9Pt-55UoMI0tKDlyU'
             },
             {
                 id: 8,
@@ -109,7 +116,8 @@ export class InMemoryDataService implements InMemoryDbService {
                 releaseDate: '06.03.2020',
                 awards: '/',
                 genre: 'Trap',
-                rate: 4
+                rate: 4,
+                link: 'https://www.youtube.com/playlist?list=OLAK5uy_mZ1EaZRbTVvWNl_LZKNSzI3hviTLYUmmM'
             },
             {
                 id: 9,
@@ -121,7 +129,8 @@ export class InMemoryDataService implements InMemoryDbService {
                 releaseDate: '10.07.2020',
                 awards: '/',
                 genre: 'HipHop/Trap',
-                rate: 4
+                rate: 4,
+                link: 'https://www.youtube.com/playlist?list=OLAK5uy_mJNb--E_-M1DREIcO8mmGsiKkgII_2eSw'
             },
             {
                 id: 10,
@@ -133,7 +142,8 @@ export class InMemoryDataService implements InMemoryDbService {
                 releaseDate: '06.12.2019',
                 awards: '/',
                 genre: 'HipHop/Rock',
-                rate: 4
+                rate: 4,
+                link: 'https://www.youtube.com/playlist?list=OLAK5uy_l_jXPU7octqI8qVddbzoZaWSD43_RUC8w'
             },
             {
                 id: 11,
@@ -145,7 +155,8 @@ export class InMemoryDataService implements InMemoryDbService {
                 releaseDate: '25.03.2020',
                 awards: '/',
                 genre: 'HipHop',
-                rate: 4
+                rate: 4,
+                link: 'https://www.youtube.com/playlist?list=OLAK5uy_kT53ojUGPiVma-YdrZHdDrUOcxwEUD37I'
             },
             {
                 id: 12,
@@ -157,7 +168,8 @@ export class InMemoryDataService implements InMemoryDbService {
                 releaseDate: '06.09.2019',
                 awards: '/',
                 genre: 'HipHop/Pop/Rock',
-                rate: 4
+                rate: 4,
+                link: 'https://www.youtube.com/playlist?list=OLAK5uy_mX9d9zsFckvzZEXQtDpdjnMdeZJrV9Wnc'
             },
             {
                 id: 13,
@@ -169,7 +181,8 @@ export class InMemoryDataService implements InMemoryDbService {
                 releaseDate: '05.07.2019',
                 awards: '/',
                 genre: 'HipHop/Rock',
-                rate: 3
+                rate: 3,
+                link: 'https://www.youtube.com/playlist?list=OLAK5uy_k1XhlFSND0DMJHx7oMey5IAdEUff1AAsc'
             },
             {
                 id: 14,
@@ -181,7 +194,8 @@ export class InMemoryDataService implements InMemoryDbService {
                 releaseDate: '17.01.2020',
                 awards: '/',
                 genre: 'HipHop',
-                rate: 4
+                rate: 4,
+                link: 'https://www.youtube.com/playlist?list=OLAK5uy_nyPpHefgBGBt_CgAaqT3PV6BLxh_tU59s',
             },
             {
                 id: 15,
@@ -193,7 +207,8 @@ export class InMemoryDataService implements InMemoryDbService {
                 releaseDate: '07.12.2018',
                 awards: '/',
                 genre: 'HipHop/Rock',
-                rate: 4
+                rate: 4,
+                link: 'https://www.youtube.com/playlist?list=OLAK5uy_m5riLsB5iVpADmWfHmzkFNc8QGBWwBkWM'
             }
 
         ];
@@ -201,11 +216,20 @@ export class InMemoryDataService implements InMemoryDbService {
             {
                 id: 1,
                 name: 'DaBaby',
-                picture: 'https://media.pitchfork.com/photos/5c7d4c1b4101df3df85c41e5/1:1/w_600/Dababy_BabyOnBaby.jpg',
+                picture: 'https://www.refinery29.com/images/9134010.jpg',
                 album: 'Baby On Baby',
                 awards: '/',
                 genre: 'HipHop',
                 rating: 5
+            },
+            {
+                id: 2,
+                name: 'DaBaby',
+                picture: 'https://www.refinery29.com/images/9134010.jpg',
+                album: 'Baby On Baby',
+                awards: '/',
+                genre: 'HipHop',
+                rating: 4
             }
         ];
         return { musicItems, musicGenres, topRating };

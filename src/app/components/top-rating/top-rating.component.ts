@@ -10,7 +10,7 @@ import { GetItems } from 'src/app/store/action';
 })
 export class TopRatingComponent implements OnInit {
 
-  constructor(private store: Store<{items: TopRating[]; cart: [] }>) { 
+  constructor(private store: Store<{items: TopRating[]; cart: []; shop:any }>) { 
     store.pipe(select('shop')).subscribe(data=>(this.items = data.items));
     console.log(this.items);
   }

@@ -18,7 +18,7 @@
     </ul>
     <div class="row-cart">
     <form class="style-center form-inline my-2 my-lg-0">
-      <img (click)="openModal()" src="https://img.icons8.com/ultraviolet/40/000000/shopping-cart.png" alt="cart"/>
+      <img routerLink="/myplaylist" [state]="{product:cart}" src="https://img.icons8.com/ultraviolet/40/000000/shopping-cart.png" alt="cart"/>
       <span class="badge" *ngIf="cart.length > 0">{{cart.length}}</span>    
     </form>
 
@@ -27,22 +27,3 @@
 </nav>
 
 <router-outlet></router-outlet>
-
-<div class="modal" [style.display]="displayModal()" [style.background-color]="'#d1d1d1ad'" tabindex="-1" role="dialog">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content modal-background">
-      <div class="modal-header">
-        <h5 class="modal-title">My cart</h5>
-        <button type="button" class="close" (click)="openModal()">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <app-my-cart-item [albums]="cart"></app-my-cart-item>
-      </div>
-      <div *ngFor="let item of cart">
-         <p></p>
-      </div>
-    </div>
-  </div>
-</div>

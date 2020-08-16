@@ -17,6 +17,7 @@ import { ItemInCartComponent } from './components/item-in-cart/item-in-cart.comp
 import { TopRatingComponent } from './components/top-rating/top-rating.component';
 import { ShopEffects } from './store/effect';
 import { EffectsModule } from '@ngrx/effects';
+import { NgxAudioPlayerModule } from 'ngx-audio-player';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { EffectsModule } from '@ngrx/effects';
     EffectsModule.forRoot([ShopEffects]),
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
       dataEncapsulation: false,
-    })
+    }),
+    NgxAudioPlayerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

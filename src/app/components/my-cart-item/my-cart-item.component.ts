@@ -1,5 +1,10 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { MusicItem, MusicItemInCart } from 'src/app/models/music-item.model';
+import { Component, OnInit, Inject } from '@angular/core';
+import { MusicItem } from 'src/app/models/music-item.model';
+import { Observable } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
+import { map } from 'rxjs/operators';
+import { Store, select } from '@ngrx/store';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-my-cart-item',
@@ -7,7 +12,17 @@ import { MusicItem, MusicItemInCart } from 'src/app/models/music-item.model';
   styleUrls: ['./my-cart-item.component.css']
 })
 export class MyCartItemComponent implements OnInit {
-    ngOnInit(): void {
-    }
-    @Input() albums: MusicItem[] = [];
+    state$: Observable<MusicItem[]>;
+    items: MusicItem[] = [];
+
+    constructor(public activatedRoute: ActivatedRoute){}
+    
+
+    ngOnInit()
+    {
+      this.state$ = this.activatedRoute.paramMap.pipe(map(() => window.history.state))
+      this.state$.subscribe(x=>this.items = x['product'])
+    }   
+
+   
 }

@@ -7,7 +7,7 @@ import { TopRatingComponent } from './top-rating/top-rating.component';
 
 const routes: Routes = [
   { path: '' , component: MusicChooseComponent },
-  { path: 'mycart', component: MyCartItemComponent },
+  { path: 'myplaylist', component: MyCartItemComponent },
   { path: 'about', component: MyProfileComponent },
   { path: 'topratings', component: TopRatingComponent }
 ];
